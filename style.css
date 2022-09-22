@@ -43,7 +43,7 @@ main{
     overflow: hidden;
     cursor: pointer;
 }
-
+/*
 .image:hover::before{
     content: '';
     position: absolute;
@@ -55,7 +55,7 @@ main{
     background-position: center;
     background-repeat: no-repeat;
 }
-
+*/
 main h1{
     display: inline;
     padding: 0 1.875rem;
@@ -65,12 +65,13 @@ main h1{
 
     color: white;
     cursor: pointer;
+    transition: all ease-in 0.2s;
 }
-
+/*
 main h1:hover{
     color: var(--text-secondary);
 }
-
+*/
 main > p{
     padding: 0 1.875rem;
 
@@ -180,8 +181,33 @@ main > p{
 .credits p span{
     color: white;
     cursor: pointer;
+    transition: all ease-in 0.2s;
 }
 
+/*
 .credits p span:hover{
     color: var(--text-secondary);
+}
+*/
+@media (hover: hover) {
+    .image:hover::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    
+        background-color: hsla(178, 100%, 50%, 0.5);
+        background-image: url("./images/icon-view.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    main h1:hover{
+        color: var(--text-secondary);
+    }
+    
+
+    .credits p span:hover{
+        color: var(--text-secondary);
+    }
 }
