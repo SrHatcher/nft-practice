@@ -29,7 +29,7 @@ main{
 
     background-color: var(--card-background);
     border-radius: .9375rem;
-    box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.39);
+    box-shadow: 0 0 3.125rem .125rem rgba(0, 0, 0, 0.39);
 }
 
 .image{
