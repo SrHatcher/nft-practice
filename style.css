@@ -1,0 +1,182 @@
+:root{
+    --background: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --card-line: hsl(215, 32%, 27%);
+
+    --text-primary: hsl(215, 51%, 70%);
+    --text-secondary: hsl(178, 100%, 50%);
+}
+
+/* i'm using the plugin px to rem & rpx & vw (cssrem) to convert my px sizes to rem */
+
+body{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(21.875rem, 23.4375rem));
+    grid-template-rows: 37.5rem;
+    justify-content: center;
+    align-content: center;
+
+    background-color: var(--background);
+}
+
+main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 0.8fr 1fr 0.7fr 1fr 0.2fr;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--card-background);
+    border-radius: .9375rem;
+}
+
+.image{
+    position: relative;
+    width: 85%;
+    height: auto;
+
+    margin: calc(100% - 93%) auto;
+
+    border-radius: .625rem;
+    overflow: hidden;
+}
+
+.image:hover::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-color: aqua;
+}
+
+/* I thought this would work, but it didn't, so i'm going to use JS instead
+main img:hover::after{
+    position: fixed;
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    background-color: aqua;
+}
+*/
+
+main h1{
+    padding: 0 1.875rem;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.625rem;
+
+    color: white;
+}
+
+main > p{
+    padding: 0 1.875rem;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+
+    color: var(--text-primary);
+}
+
+.currency{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    align-items: center;
+
+    margin: 0 1.875rem;
+
+    border-bottom: .125rem solid var(--card-line);
+}
+
+.currency__info{
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+}
+
+.currency__info span{
+    display: inline-block;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    background-image: url("./images/icon-ethereum.svg");
+    background-position: center;
+    background-size: auto 1.25rem;
+    background-repeat: no-repeat;
+
+}
+
+.currency__info h2{
+    display: inline-block;
+
+    margin: 0;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+
+    color: var(--text-secondary);
+}
+
+.currency__time{
+    display: flex;
+    align-items: center;
+    justify-self: right;
+    gap: .625rem;
+}
+
+.currency__time span{
+    display: inline-block;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    background-image: url("./images/icon-clock.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 1.25rem;
+}
+
+.currency__time p{
+    display: inline-block;
+
+    margin: 0;
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+    
+    color: var(--text-primary);
+}
+
+.credits{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    padding: 0 1.875rem;
+}
+
+.credits > span{
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-image: url("./images/image-avatar.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2.5rem 2.5rem;
+    border-radius: 50%;
+}
+
+.credits p{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+
+    color: var(--text-primary);
+}
+
+.credits p span{
+    color: white;
+}
